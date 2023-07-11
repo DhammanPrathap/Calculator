@@ -8,6 +8,7 @@ class Calculator{
 	public static void main(String[] args){
 		while(true){
 			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			String hekko = null;
 			double number1, number2;
 			double result;
 			char operator;
@@ -122,10 +123,10 @@ class Calculator{
 						break;
 					}
 					else{
-						System.out.println("Invalid Option!");
+						System.out.println("Invalid Option!dsfgsdg");
 					}
 				}catch(IOException ioe){
-				System.out.println("Ioexception occurred!");
+				System.out.println("Ioexception occurredjsdgfyjg!");
 				}
 			}
 			if(exit.equalsIgnoreCase("Y")){
