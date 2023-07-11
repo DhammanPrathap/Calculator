@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 class Calculator{
 	public static void main(String[] args){
 		while(true){
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		double number1, number2;
-		double result;
-		char operator;
-		while(true){
+			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			double number1, number2;
+			double result;
+			char operator;
+			while(true){
 				System.out.println("Enter first number: ");
 				try{
 					number1 = Double.parseDouble(br.readLine());
@@ -34,7 +34,9 @@ class Calculator{
 							System.out.println("Invalid Option!");
 						}
 					}
-					}catch(IOException ioe){System.out.println("Ioexception occurred!");}
+				}catch(IOException ioe){
+					System.out.println("Ioexception occurred!");
+				}
 			}
 			while(true){
 				System.out.println("Enter second number: ");
@@ -45,7 +47,8 @@ class Calculator{
 					System.out.println("Cannot convert string to numbers!");
 				}catch(IOException ioe){
 					System.out.println("Ioexception occurred!");
-				}try{
+				}
+				try{
 					while(true){
 						System.out.println("Do you want to exit from program[Y/N]!: ");
 						String exit=br.readLine();
@@ -59,7 +62,9 @@ class Calculator{
 							System.out.println("Invalid Option!");
 						}
 					}
-					}catch(IOException ioe){System.out.println("Ioexception occurred!");}
+				}catch(IOException ioe){
+					System.out.println("Ioexception occurred!");
+				}
 			}
 			while(true){
 				try{
@@ -82,10 +87,10 @@ class Calculator{
 					else{
 						System.out.println("Invalid Option!");
 					}
-				}catch(IOException ioe){
+				}
+				catch(IOException ioe){
 					System.out.println("Ioexception occurred!");
 				}
-				
 			}
 			switch(operator){
 				case '+'-> {System.out.println("Addition of two numbers is: "+(number1+number2));
@@ -109,19 +114,23 @@ class Calculator{
 			}
 			System.out.println("Successfully performed operation!");
 			String exit;
-			while(true){try{
-				System.out.println("Do you want to exit from Main program[Y/N]!: ");
-				exit=br.readLine();
-				if(exit.equalsIgnoreCase("Y")||exit.equalsIgnoreCase("N")){
-					break;
+			while(true){
+				try{
+					System.out.println("Do you want to exit from Main program[Y/N]!: ");
+					exit=br.readLine();
+					if(exit.equalsIgnoreCase("Y")||exit.equalsIgnoreCase("N")){
+						break;
+					}
+					else{
+						System.out.println("Invalid Option!");
+					}
+				}catch(IOException ioe){
+				System.out.println("Ioexception occurred!");
 				}
-				else{
-					System.out.println("Invalid Option!");
-				}
-			}catch(IOException ioe){System.out.println("Ioexception occurred!");}
 			}
-			if(exit.equalsIgnoreCase("Y")){break;}
+			if(exit.equalsIgnoreCase("Y")){
+				break;
+			}
 		}
  	}
-
 }
